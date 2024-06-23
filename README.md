@@ -1,16 +1,23 @@
-# lab-flask
+# Diabetes Prediction Project
 
-<!-- ![image](https://user-images.githubusercontent.com/115451707/196919992-edcfea8b-e3f6-4f35-9398-43be66b5622d.png) -->
+This project is a Flask web application for predicting diabetes using various machine learning techniques. The best-performing model, a decision tree, has been implemented for training our diabetes predictor.
 
+## Project Structure
 
-To run flask application 
+- `dataset/` - Contains the dataset files.
+- `model/` - Contains the trained model `.pkl` files.
+- `notebook/` - Contains Jupyter notebooks used for model training and evaluation.
+- `templates/` - Contains HTML templates for the Flask application.
+- `app.py` - The main Flask application file.
+- `data.json` - Contains additional data used by the application.
 
-```
-python app.py
-```
+## Setup Instructions
 
+### Step 1: Create a virtual environment
 
-To access your flask application open new tab in and paste the url:
-```
-https://{your_url}.pwskills.app:5000/
-```
+Before running the application, you need to create a virtual environment for Flask.
+
+```bash
+python -m venv venv
+
+### Step 2: Activate the virtual environment
