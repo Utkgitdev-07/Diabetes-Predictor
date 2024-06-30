@@ -1,1 +1,111 @@
-<h1>Person is: {{result}}</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f7f9fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .login {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h1 {
+            color: #333333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-control {
+            margin-bottom: 15px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            width: 100%;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+        .result {
+            margin-top: 20px;
+            text-align: center;
+            color: #ffffff;
+            background-color: #28a745;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 400px;
+        }
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #333333;
+                color: #f7f9fc;
+            }
+            .login {
+                background-color: #444444;
+            }
+            h1 {
+                color: #f7f9fc;
+            }
+            .form-control {
+                background-color: #555555;
+                color: #f7f9fc;
+                border: 1px solid #666666;
+            }
+            .form-control::placeholder {
+                color: #cccccc;
+            }
+            .btn-primary {
+                background-color: #007bff;
+                border-color: #007bff;
+            }
+            .btn-primary:hover {
+                background-color: #0056b3;
+                border-color: #004085;
+            }
+            .result {
+                color: #333333;
+                background-color: #28a745;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <h1>Diabetes Prediction</h1>
+        <form action="{{ url_for('predict_datapoint') }}" method="post">
+            <input type="text" name="Pregnancies" class="form-control" placeholder="Pregnancies" required="required">
+            <input type="text" name="Glucose" class="form-control" placeholder="Glucose" required="required">
+            <input type="text" name="BloodPressure" class="form-control" placeholder="BloodPressure" required="required">
+            <input type="text" name="SkinThickness" class="form-control" placeholder="SkinThickness" required="required">
+            <input type="text" name="Insulin" class="form-control" placeholder="Insulin" required="required">
+            <input type="text" name="BMI" class="form-control" placeholder="BMI" required="required">
+            <input type="text" name="DiabetesPedigreeFunction" class="form-control" placeholder="DiabetesPedigreeFunction" required="required">
+            <input type="text" name="Age" class="form-control" placeholder="Age" required="required">
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+    </div>
+
+    {% if result %}
+        <div class="result">
+            <h1>Person is: {{result}}</h1>
+        </div>
+    {% endif %}
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
