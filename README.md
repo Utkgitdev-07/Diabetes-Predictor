@@ -13,15 +13,18 @@ This project is a Flask web application for predicting diabetes using various ma
 
 ## Setup Instructions
 
-### Step 1:Clone the repository: git clone https://github.com/Utkgitdev-07/Diabetes-Predictor.git cd diamond-price-prediction
+### Step 1:
+Clone the repository: git clone https://github.com/Utkgitdev-07/Diabetes-Predictor.git cd diamond-price-prediction
 
 ### Step 2: Install the required packages
 Install the dependencies listed in the requirements.txt file.
+
 pip install -r requirements.txt
 
 
 ### Step 3: Run the Flask application
 To start the Flask application, run:
+
 python app.py
 
 
@@ -36,8 +39,11 @@ Replace {your_url} with your specific URL.
 * Notebooks
 
 Decision Tree - Contains the decision tree model.
+
 Naive Bayes - Contains the naive bayes model.
+
 SVM - Contains the support vector machine model.
+
 Logistic Regression - Contains the logistic regression model.
 
 
