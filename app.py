@@ -8,9 +8,8 @@ import pandas as pd
 application = Flask(__name__)
 app=application
 
-scaler=pickle.load(open(r"C:\UTKARSH\ALL\jupyter\Machine Learning\End to End ML Project\Diabetes-Deployment-With-BeanStalk-main\Model\standardScalar.pkl", "rb"))
-model = pickle.load(open(r"C:\UTKARSH\ALL\jupyter\Machine Learning\End to End ML Project\Diabetes-Deployment-With-BeanStalk-main\Model\log_reg.pkl", "rb"))
-
+scaler=pickle.load(open(r"Model\modelForPrediction.pkl", "rb"))
+model = pickle.load(open(r"Model\standardScalar.pkl", "rb"))
 ## Route for homepage
 
 @app.route('/')
