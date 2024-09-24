@@ -16,7 +16,12 @@ This project is a Flask web application for predicting diabetes using various ma
 ### Step 1:
 Clone the repository: git clone https://github.com/Utkgitdev-07/Diabetes-Predictor.git cd diamond-price-prediction
 
-### Step 2: Install the required packages
+### Step 2:Create Environment & Install the required packages 
+In Powershell
+
+1) python -m venv env
+2) 2).\env\Scripts\activate
+
 Install the dependencies listed in the requirements.txt file.
 
 pip install -r requirements.txt
