@@ -20,7 +20,7 @@ Clone the repository: git clone https://github.com/Utkgitdev-07/Diabetes-Predict
 In Powershell
 
 1) python -m venv env
-2) 2).\env\Scripts\activate
+2) \env\Scripts\activate
 
 Install the dependencies listed in the requirements.txt file.
 
